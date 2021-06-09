@@ -17,7 +17,9 @@ REGISTRY_NAME=valentinb10
 IMAGE_NAME=csi-rclone
 IMAGE_TAG=$(REGISTRY_NAME)/$(IMAGE_NAME):$(VERSION)
 
-.PHONY: all rclone-plugin clean rclone-container
+.ONESHELL:
+
+.PHONY: all rclone-plugin clean rclone-container helm
 
 all: plugin container push
 
@@ -33,3 +35,8 @@ push:
 clean:
 	go clean -r -x
 	-rm -rf _output
+
+helm:
+	cd charts
+	helm package csi-rclone
+	helm repo index --url http://tech.weatherforce.org/csi-rclone/charts .
