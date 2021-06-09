@@ -49,7 +49,7 @@ spec:
             capabilities:
               add: ["SYS_ADMIN"]
             allowPrivilegeEscalation: true
-          image: "{{- .Values.image }}:{{- .Values.version }}"
+          image: wunderio/csi-rclone:{{- .Values.version }}
           imagePullPolicy: Always
           args:
             - "--nodeid=$(NODE_ID)"
