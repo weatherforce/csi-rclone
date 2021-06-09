@@ -4,8 +4,11 @@ storageClass:
   # storageClass name that will be deployed to cluster.
   name: "rclone"
 
-# rclone CSI plugin image release version. https://cloud.docker.com/u/wunderio/repository/docker/wunderio/csi-rclone
-version: v1.2.6
+# rclone image
+image: valentinb10/csi-rclone
+
+# rclone version. https://hub.docker.com/r/valentinb10/csi-rclone/tags
+version: v1.55.1
 
 # use default parameters. You might want set this to false when using as subchart.
 defaultParams: true
