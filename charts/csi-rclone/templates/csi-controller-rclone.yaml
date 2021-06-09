@@ -51,7 +51,7 @@ spec:
           resources:
             {{- .Values.controller.registrar.resources | toYaml | nindent 12 }}
         - name: rclone
-          image: valentinb10/csi-rclone:{{- .Values.version }}
+          image: {{ printf "%s:%s" .Values.image.name .Values.image.tag  | quote }}
           imagePullPolicy: Always
           args :
             - "--nodeid=$(NODE_ID)"
