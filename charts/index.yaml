@@ -3,11 +3,11 @@ entries:
   csi-rclone:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2021-06-09T15:41:09.277554109+02:00"
+    created: "2021-06-09T16:25:20.766692565+02:00"
     description: CSI plugin for rclone mount
-    digest: 36566ee8e36c1d5f2dbca8e3f3150059a2841f6dbb03cdea782467550a86825a
+    digest: 72bfb18f8aa424fa31c697150ccc117ecbc82e1c445220d659fe8faa1aab70d4
     name: csi-rclone
     urls:
     - http://tech.weatherforce.org/csi-rclone/charts/csi-rclone-2021.06.09.tgz
     version: 2021.06.09
-generated: "2021-06-09T15:41:09.276975439+02:00"
+generated: "2021-06-09T16:25:20.765868858+02:00"
