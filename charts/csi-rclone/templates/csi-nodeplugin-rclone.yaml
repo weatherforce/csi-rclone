@@ -73,6 +73,9 @@ spec:
             - name: pods-mount-dir
               mountPath: {{ .Values.nodePlugin.kubeletBasePath }}/pods
               mountPropagation: "Bidirectional"
+            {{- with .Values.nodePlugin.extraVolumeMounts }}
+            {{- . | toYaml | nindent 12 }}
+            {{- end }}
           resources:
             {{- .Values.nodePlugin.rclone.resources | toYaml | nindent 12 }}
       volumes:
@@ -88,6 +91,9 @@ spec:
             path: {{ .Values.nodePlugin.kubeletBasePath }}/plugins_registry
             type: DirectoryOrCreate
           name: registration-dir
+        {{- with .Values.nodePlugin.extraVolumes }}
+        {{- . | toYaml | nindent 8 }}
+        {{- end }}
       tolerations:
         - effect: NoSchedule
           operator: Exists
