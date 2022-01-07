@@ -8,7 +8,7 @@ storageClass:
 image: 
   name: valentinb10/csi-rclone
   # rclone version. https://hub.docker.com/r/valentinb10/csi-rclone/tags
-  tag: v1.55.1
+  tag: v1.57.0
 
 # use default parameters. You might want set this to false when using as subchart.
 defaultParams: true
